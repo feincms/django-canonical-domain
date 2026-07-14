@@ -21,14 +21,8 @@ repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: "v0.15.21"
     hooks:
-      - id: ruff
+      - id: ruff-check
       - id: ruff-format
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v4.0.0-alpha.8
-    hooks:
-      - id: prettier
-        args: [--list-different, --no-semi]
-        exclude: "^conf/|.*\\.html$"
   - repo: https://github.com/tox-dev/pyproject-fmt
     rev: v2.25.3
     hooks:
