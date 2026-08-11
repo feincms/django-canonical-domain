@@ -65,8 +65,7 @@ def canonical_domain(get_response):
             secure_redirect = False
 
         return HttpResponsePermanentRedirect(
-            "http%s://%s%s"
-            % (
+            "http{}://{}{}".format(
                 "s" if is_secure or secure_redirect else "",
                 request.get_host() if is_exempt else host,
                 request.get_full_path(),
